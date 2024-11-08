@@ -61,7 +61,7 @@ This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice fo
 
 ## Circuit Diagram of the POR Circuit
 
-![Schematic](https://github.com/user-attachments/assets/d1806c98-a36b-473a-b545-c94c71728e9b)
+![Schematic](https://github.com/user-attachments/assets/9d6a220d-8df4-4255-a520-08497f27505f)
 
 ## Power-On-Reset Circuit Parameters
 
