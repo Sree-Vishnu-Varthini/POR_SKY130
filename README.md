@@ -200,7 +200,7 @@ or you can double click on eSim icon created on Desktop after installation.
 - https://github.com/google/skywater-pdk
 
 ## Contributors
-- Sree Vishnu Varthini S, Pre-Final Year Student, Sri Eshwar College of Engineering, sreevishnuvarthini@gmail.com
+- Sree Vishnu Varthini S, Pre-Final Year Student.
 
 ## Acknowledgements
 - Mr. Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
