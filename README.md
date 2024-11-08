@@ -2,6 +2,8 @@
 
 This repository presents an analysis and design of a low-power Power-on-Reset (POR) circuit using eSim, Ngspice and SKY130 PDK technology. 
 
+**View the Report** - [Report](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/blob/master/Documentation/Low_Power_POR.pdf)
+
 ## Contents
 - [Overview](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Overview)
 - [Circuit Design](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Circuit-Design)
@@ -32,8 +34,6 @@ This repository presents an analysis and design of a low-power Power-on-Reset (P
 Power-On Reset (POR) circuits are commonly used in various electronic systems to ensure that components start up in a defined, predictable state. When an IoT device is first powered on, it needs a well-defined reset signal to ensure that all internal components start from a known state. POR circuits generate this reset signal, which is crucial for initializing the system reliably and avoiding potential issues like data corruption or unstable operation.
 
 Traditional designs often consume significant power due to bandgap reference architectures. Here, we propose an alternative using a current reference and comparator architecture that reduces power overhead while enhancing performance and resilience against brown-out events.
-
-[Report](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/blob/master/Documentation/Low_Power_POR.pdf)
 
 ## Circuit Design
 Conventional Power-On Reset (POR) circuits tend to use more power due to their reliance on bandgap reference architectures, which draw current continuously to keep a stable reference voltage.
