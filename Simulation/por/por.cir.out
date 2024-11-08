@@ -1,0 +1,45 @@
+* c:\users\sreev\esim-workspace2\por\por.cir
+
+.lib "C:\FOSSEE2\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
+.include "C:\FOSSEE2\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
+.include "C:\FOSSEE2\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
+.include "C:\FOSSEE2\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.include "C:\FOSSEE2\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "C:\FOSSEE2\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.include "C:\FOSSEE2\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
+* s c m o d e
+xsc2 net-_sc1-pad1_ gnd iref gnd sky130_fd_pr__nfet_01v8 
+xsc3 vdd gnd iref gnd sky130_fd_pr__nfet_01v8 
+xsc5 net-_sc5-pad1_ net-_sc4-pad1_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc4 net-_sc4-pad1_ net-_sc4-pad1_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc8 net-_sc8-pad1_ vdd gnd gnd sky130_fd_pr__nfet_01v8 
+xsc10 rstn i_nm1_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc1 net-_sc1-pad1_ rstn vdd vdd sky130_fd_pr__pfet_01v8 
+xsc7 i_nm1_ net-_sc5-pad1_ vdd vdd sky130_fd_pr__pfet_01v8 
+xsc9 rstn i_nm1_ vdd vdd sky130_fd_pr__pfet_01v8 
+xsc6 net-_sc5-pad1_ net-_sc5-pad1_ vdd vdd sky130_fd_pr__pfet_01v8 
+v1  rstn gnd pulse(0 1 0.007 0.0001 0.0001 0.015 0.0225)
+* u1  rstn plot_v1
+* u2  iref plot_v1
+* u4  i_nm1_ plot_v1
+* u3  vdd plot_v1
+* u5  iref net-_sc4-pad1_ plot_i2
+v2 vdd gnd  dc 0.5
+* u6  i_nm1_ net-_sc8-pad1_ plot_i2
+v_u5 iref net-_sc4-pad1_ 0
+v_u6 i_nm1_ net-_sc8-pad1_ 0
+.tran 1e-03 30e-03 0e-03
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(rstn)
+plot v(iref)
+plot v(i_nm1_)
+plot v(vdd)
+plot i(v_u5)
+plot i(v_u6)
+.endc
+.end

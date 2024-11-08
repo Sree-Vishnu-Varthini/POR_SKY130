@@ -1,0 +1,29 @@
+* C:\Users\sreev\eSim-Workspace2\por\por.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 11/08/24 16:13:06
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+scmode1  SKY130mode		
+SC2  Net-_SC1-Pad1_ GND Iref GND sky130_fd_pr__nfet_01v8		
+SC3  vdd GND Iref GND sky130_fd_pr__nfet_01v8		
+SC5  Net-_SC5-Pad1_ Net-_SC4-Pad1_ GND GND sky130_fd_pr__nfet_01v8		
+SC4  Net-_SC4-Pad1_ Net-_SC4-Pad1_ GND GND sky130_fd_pr__nfet_01v8		
+SC8  Net-_SC8-Pad1_ vdd GND GND sky130_fd_pr__nfet_01v8		
+SC10  rstn I_NM1_ GND GND sky130_fd_pr__nfet_01v8		
+SC1  Net-_SC1-Pad1_ rstn vdd vdd sky130_fd_pr__pfet_01v8		
+SC7  I_NM1_ Net-_SC5-Pad1_ vdd vdd sky130_fd_pr__pfet_01v8		
+SC9  rstn I_NM1_ vdd vdd sky130_fd_pr__pfet_01v8		
+SC6  Net-_SC5-Pad1_ Net-_SC5-Pad1_ vdd vdd sky130_fd_pr__pfet_01v8		
+v1  rstn GND pulse		
+U1  rstn plot_v1		
+U2  Iref plot_v1		
+U4  I_NM1_ plot_v1		
+U3  vdd plot_v1		
+U5  Iref Net-_SC4-Pad1_ plot_i2		
+v2  vdd GND DC		
+U6  I_NM1_ Net-_SC8-Pad1_ plot_i2		
+
+.end
