@@ -44,16 +44,16 @@ This approach not only saves power but also improves resilience against voltage 
 
 ### Components
 
-1. Reference Current Generation: Sub-threshold currents through specific NMOS transistors generate a stable reference current.
-2. Comparator: The reference current is compared to a tracking current from VDD to determine the reset conditions.
-3. Inverter for Reset Signal: Inverters generate a reset signal, ensuring correct reset operation during power fluctuations.
+1. **Reference Current Generation:** Sub-threshold currents through specific NMOS transistors generate a stable reference current.
+2. **Comparator:** The reference current is compared to a tracking current from VDD to determine the reset conditions.
+3. **Inverter for Reset Signal:** Inverters generate a reset signal, ensuring correct reset operation during power fluctuations.
 
 ### Implementation
 The proposed POR circuit uses a 10-transistor configuration, integrating components such as current mirrors and inverters to achieve effective low-power operation.
 
-- Current Mirrors: Formed by PMOS and NMOS pairs to replicate reference currents.
-- Power Supply Voltage Tracking: Monitored through an NMOS transistor directly connected to VDD.
-- Reset Signal (RSTN): An inverter outputs the RSTN signal, activated during power-up and brown-out events, ensuring a reliable POR function.
+- **Current Mirrors:** Formed by PMOS and NMOS pairs to replicate reference currents.
+- **Power Supply Voltage Tracking:** Monitored through an NMOS transistor directly connected to VDD.
+- **Reset Signal (RSTN):** An inverter outputs the RSTN signal, activated during power-up and brown-out events, ensuring a reliable POR function.
 
 This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice for validation and analysis.
 
@@ -78,30 +78,19 @@ This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice fo
 
 ## Power-On-Reset Circuit Parameters
 
+| Parameter                    | Description                                      | Min  | Typical | Max | Unit   | Condition               |
+|------------------------------|--------------------------------------------------|------|---------|-----|--------|-------------------------|
+| **VDD**                      | Power-on-reset trip-voltage                      |   -  | 0.5     | -   | V      |   |
+| **VPOR**                     | Power-on-reset trip-voltage                      | 0.45 | -       | -   | V      | 500 mV supply voltage   |
+| **VBOD**                     | Brown-out detection trip-voltage                 | 0.439| -       | -   | V      | Room temperature        |
+| **Temperature Coefficient of VPOR** | Sensitivity of trip-voltage to temperature changes | -    | 227     | -   | µV/°C | −40°C to 125°C, VDD = 0.5 V |
+| **Temperature Coefficient of VBOD** | Sensitivity of trip-voltage to temperature changes | -    | 204     | -   | µV/°C | −40°C to 125°C, VDD = 0.5 V |
+| **Quiescent Current**        | Current drawn at low supply voltage              | -    | 64      | -   | nA     | 0.5 V supply voltage    |
+| **Static Power**             | Power consumption of the circuit                 | -    | 32      | -   | nW     | 0.5 V supply voltage    |
+
+
+
 ## Pre-Layout Performance Characteristics
-
-### VDD vs. Time [0 ms - 30 ms] @ VDD = 1 V
-![V(VDD)](https://github.com/user-attachments/assets/21433269-46d9-4c88-83d4-d742ddfa4650)
-
-### V1 vs. Time [0 ms - 30 ms] @ VDD = 1 V
-
-![V(V1)](https://github.com/user-attachments/assets/5d051642-18f6-4eb7-806c-316a72ab3892)
-
-### V2 vs. Time [0 ms - 30 ms] @ VDD = 1 V
-
-![V(V2)](https://github.com/user-attachments/assets/6d4c8da1-99b0-4a08-b073-52c487f525f5)
-
-### RSTN vs. Time [0 ms - 30 ms] @ VDD = 1 V
-
-![V(RSTN)](https://github.com/user-attachments/assets/ba77da62-b9b0-4737-9a78-8a1cd30544ef)
-
-### I(REF) vs. Time [0 ms - 30 ms] @ VDD = 1 V
-
-![I(IREF)](https://github.com/user-attachments/assets/3ce5938e-5ee4-4aa8-93d4-dc996359924e)
-
-### I(NM1) vs. Time [0 ms - 30 ms] @ VDD = 1 V
-
-![I(NM1)](https://github.com/user-attachments/assets/b6c6598b-d170-45ef-9317-d849cb489e73)
 
 ### VDD vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
@@ -127,23 +116,47 @@ This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice fo
 
 ![I(NM1)](https://github.com/user-attachments/assets/b2b97ef6-a992-4ea5-9e93-8f1d84e2e4b4)
 
+### VDD vs. Time [0 ms - 30 ms] @ VDD = 1 V
+![V(VDD)](https://github.com/user-attachments/assets/21433269-46d9-4c88-83d4-d742ddfa4650)
+
+### V1 vs. Time [0 ms - 30 ms] @ VDD = 1 V
+
+![V(V1)](https://github.com/user-attachments/assets/5d051642-18f6-4eb7-806c-316a72ab3892)
+
+### V2 vs. Time [0 ms - 30 ms] @ VDD = 1 V
+
+![V(V2)](https://github.com/user-attachments/assets/6d4c8da1-99b0-4a08-b073-52c487f525f5)
+
+### RSTN vs. Time [0 ms - 30 ms] @ VDD = 1 V
+
+![V(RSTN)](https://github.com/user-attachments/assets/ba77da62-b9b0-4737-9a78-8a1cd30544ef)
+
+### I(REF) vs. Time [0 ms - 30 ms] @ VDD = 1 V
+
+![I(IREF)](https://github.com/user-attachments/assets/3ce5938e-5ee4-4aa8-93d4-dc996359924e)
+
+### I(NM1) vs. Time [0 ms - 30 ms] @ VDD = 1 V
+
+![I(NM1)](https://github.com/user-attachments/assets/b6c6598b-d170-45ef-9317-d849cb489e73)
+
 ## Open Source Tools Used
 ### eSim
 
-  - eSim (previously known as Oscad / FreeEDA) is a free/libre and open source EDA tool for circuit design, simulation, analysis and PCB design. It is an integrated tool built using free/libre and open source software such as KiCad, Ngspice and GHDL. eSim is released under GPL.
+  - **eSim** (previously known as Oscad / FreeEDA) is a free/libre and open source EDA tool for circuit design, simulation, analysis and PCB design. It is an integrated tool built using free/libre and open source software such as KiCad, Ngspice and GHDL. eSim is released under GPL.
   - https://esim.fossee.in/home
   
 ### Ngspice
 
-  - ngspice is the open source spice simulator for electric and electronic circuits.
+  - **Ngspice** is the open source spice simulator for electric and electronic circuits.
   - http://ngspice.sourceforge.net/
 
 ### SkyWater SKY130 PDK
 
-  - The SkyWater SKY130 PDK is a collaboration between Google and SkyWater Technology Foundry to provide a fully open source Process Design Kit and related resources, which can be used to create manufacturable designs at SkyWater’s facility.
+  - The **SkyWater SKY130 PDK** is a collaboration between Google and SkyWater Technology Foundry to provide a fully open source Process Design Kit and related resources, which can be used to create manufacturable designs at SkyWater’s facility.
   - https://github.com/google/skywater-pdk
 
 ## Installation of Tools
+
 ### Installation on Windows
 1. Download the latest eSim release for Windows OS from the link: https://esim.fossee.in/downloads
 2. Locate the installer file in the folder where your downloaded files are kept.
