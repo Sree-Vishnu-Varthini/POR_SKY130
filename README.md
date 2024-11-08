@@ -159,7 +159,7 @@ $ esim
 ```
 or you can double click on eSim icon created on Desktop after installation.
 
-#### Note:
+### Note:
 
 - eSim is available for Windows 8, 10, and 11 (64-bit).
 - If you face issues with eSim-2.4, try using the more stable version eSim-2.3.
