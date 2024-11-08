@@ -9,6 +9,7 @@ This repository presents an analysis and design of a low-power Power-on-Reset (P
   - [Implementation](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Implementation)
 - [Block Diagram of the POR Circuit](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Block-Diagram-of-the-POR-Circuit)
 - [Circuit Diagram of the POR Circuit](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Circuit-Diagram-of-the-POR-Circuit)
+- [Specifications](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Specifications)
 - [Power-On-Reset Circuit Parameters](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Power-On-Reset-Circuit-Parameters)
 - [Pre-Layout Performance Characteristics](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Pre-Layout-Performance-Characteristics)
 - [Open Source Tools Used](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Open-Source-Tools-Used)
