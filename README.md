@@ -64,8 +64,6 @@ This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice fo
 
 ![Schematic](https://github.com/user-attachments/assets/9d6a220d-8df4-4255-a520-08497f27505f)
 
-## Power-On-Reset Circuit Parameters
-
 ## Specifications
 
 | Parameter                   | Value               |
@@ -77,6 +75,7 @@ This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice fo
 | TC (µV/ °C)                 |-25 to 227          |
 | Static Power                | 32nW               |
 
+## Power-On-Reset Circuit Parameters
 
 ## Pre-Layout Performance Characteristics
 
