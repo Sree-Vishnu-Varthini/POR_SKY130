@@ -21,6 +21,7 @@ This repository presents an analysis and design of a low-power Power-on-Reset (P
   - [Note](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Note)
 - [Simulation of SKY130 Schematic in eSim on Windows](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Simulation-of-SKY130-Schematic-in-eSim-on-Windows)
 - [Future Work](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Future-Work)
+- [References](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#References)
 - [Resources](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Resources)
 - [Contributors](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Contributors)
 - [Acknowledgements](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Acknowledgements)
