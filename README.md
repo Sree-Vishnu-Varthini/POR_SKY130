@@ -33,6 +33,8 @@ Power-On Reset (POR) circuits are commonly used in various electronic systems to
 
 Traditional designs often consume significant power due to bandgap reference architectures. Here, we propose an alternative using a current reference and comparator architecture that reduces power overhead while enhancing performance and resilience against brown-out events.
 
+[Report](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/blob/master/Documentation/Low_Power_POR.pdf)
+
 ## Circuit Design
 Conventional Power-On Reset (POR) circuits tend to use more power due to their reliance on bandgap reference architectures, which draw current continuously to keep a stable reference voltage.
 
