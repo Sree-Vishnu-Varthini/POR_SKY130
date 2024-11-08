@@ -69,7 +69,7 @@ This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice fo
 
 | Parameter                   | Value               |
 |-----------------------------|---------------------|
-| Technology                  | 130nm              |
+| Technology                  | 130nm (SKY130 PDK  |
 | Type                        | Current-Based      |
 | Voltage                     | 0.5V               |
 | VPOR(V)                     | 0.45               |
