@@ -66,6 +66,18 @@ This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice fo
 
 ## Power-On-Reset Circuit Parameters
 
+## Specifications
+
+| Parameter                   | Value               |
+|-----------------------------|---------------------|
+| Technology                  | 130nm              |
+| Type                        | Current-Based      |
+| Voltage                     | 0.5V               |
+| VPOR(V)                     | 0.45               |
+| TC (µV/ °C)                 |-25 to 227          |
+| Static Power                | 32nW               |
+
+
 ## Pre-Layout Performance Characteristics
 
 ### VDD vs. Time [0 ms - 30 ms] @ VDD = 1 V
