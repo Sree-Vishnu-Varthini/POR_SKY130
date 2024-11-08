@@ -6,10 +6,10 @@ This repository presents an analysis and design of a low-power Power-on-Reset (P
 - [Overview](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Overview)
 - [Circuit Design](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Circuit-Design)
   - [Components](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Components)
+  - [Implementation](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Implementation)
 - [Block Diagram of the POR Circuit](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Block-Diagram-of-the-POR-Circuit)
 - [Circuit Diagram of the POR Circuit](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Circuit-Diagram-of-the-POR-Circuit)
 - [Power-On-Reset Circuit Parameters](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Power-On-Reset-Circuit-Parameters)
-- [Implementation](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Implementation)
 - [Pre-Layout Performance Characteristics](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Pre-Layout-Performance-Characteristics)
 - [Open Source Tools Used](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#Open-Source-Tools-Used)
   - [eSim](https://github.com/Sree-Vishnu-Varthini/POR_SKY130/#eSim)
@@ -46,6 +46,15 @@ This approach not only saves power but also improves resilience against voltage 
 2. Comparator: The reference current is compared to a tracking current from VDD to determine the reset conditions.
 3. Inverter for Reset Signal: Inverters generate a reset signal, ensuring correct reset operation during power fluctuations.
 
+### Implementation
+The proposed POR circuit uses a 10-transistor configuration, integrating components such as current mirrors and inverters to achieve effective low-power operation.
+
+- Current Mirrors: Formed by PMOS and NMOS pairs to replicate reference currents.
+- Power Supply Voltage Tracking: Monitored through an NMOS transistor directly connected to VDD.
+- Reset Signal (RSTN): An inverter outputs the RSTN signal, activated during power-up and brown-out events, ensuring a reliable POR function.
+
+This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice for validation and analysis.
+
 ## Block Diagram of the POR Circuit
 
 ![Block Diagram of the POR Circuit](https://github.com/user-attachments/assets/86eea463-e1f6-4365-99d7-504f0db5ec07)
@@ -56,61 +65,52 @@ This approach not only saves power but also improves resilience against voltage 
 
 ## Power-On-Reset Circuit Parameters
 
-## Implementation
-This POR circuit uses a 10-transistor configuration, integrating components like current mirrors and inverters for effective low-power operation.
-
-- Current Mirrors: Formed by PMOS and NMOS pairs to replicate reference currents.
-- Power Supply Voltage Tracking: Monitored through an NMOS transistor directly connected to VDD.
-- Reset Signal (RSTN): An inverter outputs the RSTN signal, activated during power-up and brown-out events, ensuring a reliable POR function.
-
-The design was simulated using the open-source SKY130 PDK, eSim and Ngspice.
-
 ## Pre-Layout Performance Characteristics
 
-### VDD vs. Time [0ms - 30 ms] @ VDD = 1 V
+### VDD vs. Time [0 ms - 30 ms] @ VDD = 1 V
 ![V(VDD)](https://github.com/user-attachments/assets/21433269-46d9-4c88-83d4-d742ddfa4650)
 
-### V1 vs. Time [0ms - 30 ms] @ VDD = 1 V
+### V1 vs. Time [0 ms - 30 ms] @ VDD = 1 V
 
 ![V(V1)](https://github.com/user-attachments/assets/5d051642-18f6-4eb7-806c-316a72ab3892)
 
-### V2 vs. Time [0ms - 30 ms] @ VDD = 1 V
+### V2 vs. Time [0 ms - 30 ms] @ VDD = 1 V
 
 ![V(V2)](https://github.com/user-attachments/assets/6d4c8da1-99b0-4a08-b073-52c487f525f5)
 
-### RSTN vs. Time [0ms - 30 ms] @ VDD = 1 V
+### RSTN vs. Time [0 ms - 30 ms] @ VDD = 1 V
 
 ![V(RSTN)](https://github.com/user-attachments/assets/ba77da62-b9b0-4737-9a78-8a1cd30544ef)
 
-### I(REF) vs. Time [0ms - 30 ms] @ VDD = 1 V
+### I(REF) vs. Time [0 ms - 30 ms] @ VDD = 1 V
 
 ![I(IREF)](https://github.com/user-attachments/assets/3ce5938e-5ee4-4aa8-93d4-dc996359924e)
 
-### I(NM1) vs. Time [0ms - 30 ms] @ VDD = 1 V
+### I(NM1) vs. Time [0 ms - 30 ms] @ VDD = 1 V
 
 ![I(NM1)](https://github.com/user-attachments/assets/b6c6598b-d170-45ef-9317-d849cb489e73)
 
-### VDD vs. Time [0ms - 30 ms] @ VDD = 0.5 V
+### VDD vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
 ![V(VDD)](https://github.com/user-attachments/assets/0e55fec4-6d27-48a1-9b03-bede281b283f)
 
-### V1 vs. Time [0ms - 30 ms] @ VDD = 0.5 V
+### V1 vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
 ![V(V1)](https://github.com/user-attachments/assets/c02c1629-8ad7-43e7-8470-76ce4a389cd6)
 
-### V2 vs. Time [0ms - 30 ms] @ VDD = 0.5 V
+### V2 vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
 ![V(V2)](https://github.com/user-attachments/assets/0d8abe06-9128-44f8-b6d1-33d9244648f1)
 
-### RSTN vs. Time [0ms - 30 ms] @ VDD = 0.5 V
+### RSTN vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
 ![V(RSTN)](https://github.com/user-attachments/assets/21868042-80f4-4087-95db-18036fb907ff)
 
-### I(REF) vs. Time [0ms - 30 ms] @ VDD = 0.5 V
+### I(REF) vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
 ![I(IREF)](https://github.com/user-attachments/assets/22299da5-f4cf-4a2e-9c5a-a20fd0e1d31d)
 
-### I(NM1) vs. Time [0ms - 30 ms] @ VDD = 0.5 V
+### I(NM1) vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
 ![I(NM1)](https://github.com/user-attachments/assets/b2b97ef6-a992-4ea5-9e93-8f1d84e2e4b4)
 
