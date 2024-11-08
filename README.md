@@ -190,6 +190,13 @@ or you can double click on eSim icon created on Desktop after installation.
 - Investigate improvements in brown-out detection accuracy and power consumption.
 - Study the circuit's behavior under varying temperature conditions to ensure reliable operation in diverse environmental settings.
 
+## References
+[1] Xinxin Ren, xiaoyu hu, Shushan Qiao. "An Ultra-Low-Power Reconfigurable Power-On Reset for Multi-Supply Voltages Applications", Authorea, Jan. 2023.  
+
+[2] H. You, J. Yuan, Z. Yu and S. Qiao, "An Accurate Low-Power Power on-Reset Circuit in 55-nm CMOS Technology," in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 69, no. 8, pp. 3361 3365, Aug. 2022.  
+
+[3] H. -B. Le, X. -D. Do, S. -G. Lee and S. -T. Ryu, "A Long Reset-Time Power-On Reset Circuit With Brown-Out Detection Capability", in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 58, no. 11, pp. 778-782, Nov. 2011.
+
 ## Resources
 - https://esim.fossee.in/
 - https://esim.fossee.in/downloads
