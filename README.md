@@ -60,7 +60,9 @@ The proposed POR circuit uses a 10-transistor configuration, integrating compone
 This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice for validation and analysis.
 
 ## Block Diagram of the POR Circuit
-![Block Diagram of the POR Circuit](https://github.com/user-attachments/assets/edbdd246-11b9-4539-8062-ce48b4828ba1)
+
+![POR](https://github.com/user-attachments/assets/6dcf29e8-cfd1-4052-92a9-fe41dd9619b3)
+
 
 ## Circuit Diagram of the POR Circuit
 
