@@ -60,8 +60,7 @@ The proposed POR circuit uses a 10-transistor configuration, integrating compone
 This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice for validation and analysis.
 
 ## Block Diagram of the POR Circuit
-
-![Block Diagram of the POR Circuit](https://github.com/user-attachments/assets/86eea463-e1f6-4365-99d7-504f0db5ec07)
+![Block Diagram of the POR Circuit](https://github.com/user-attachments/assets/edbdd246-11b9-4539-8062-ce48b4828ba1)
 
 ## Circuit Diagram of the POR Circuit
 
@@ -96,50 +95,61 @@ This design was simulated using the open-source SKY130 PDK, eSim, and Ngspice fo
 
 ### VDD vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
-![V(VDD)](https://github.com/user-attachments/assets/0e55fec4-6d27-48a1-9b03-bede281b283f)
+![V(VDD)](https://github.com/user-attachments/assets/ea2f3464-f7b9-46b6-af21-070bc79e293c)
+
+
 
 ### V1 vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
-![V(V1)](https://github.com/user-attachments/assets/c02c1629-8ad7-43e7-8470-76ce4a389cd6)
+
+![V(V1)](https://github.com/user-attachments/assets/ecb89a6a-2f22-40fa-a94b-6f738c99078a)
+
 
 ### V2 vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
-![V(V2)](https://github.com/user-attachments/assets/0d8abe06-9128-44f8-b6d1-33d9244648f1)
+![V(V2)](https://github.com/user-attachments/assets/8aba40d2-4d93-468d-9bb6-46d64980cbbc)
+
+
 
 ### RSTN vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
-![V(RSTN)](https://github.com/user-attachments/assets/21868042-80f4-4087-95db-18036fb907ff)
+
+![V(RSTN)](https://github.com/user-attachments/assets/93c3bf3c-90e2-4cce-9f3c-c09ab7d89d96)
 
 ### I(REF) vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
-![I(IREF)](https://github.com/user-attachments/assets/22299da5-f4cf-4a2e-9c5a-a20fd0e1d31d)
+![I(IREF)](https://github.com/user-attachments/assets/7b2a931b-b25a-4a60-96e9-a9803811f28f)
+
 
 ### I(NM1) vs. Time [0 ms - 30 ms] @ VDD = 0.5 V
 
-![I(NM1)](https://github.com/user-attachments/assets/b2b97ef6-a992-4ea5-9e93-8f1d84e2e4b4)
+![I(NM1)](https://github.com/user-attachments/assets/9e890c35-5457-4e97-9c41-a2463998192a)
 
 ### VDD vs. Time [0 ms - 30 ms] @ VDD = 1 V
-![V(VDD)](https://github.com/user-attachments/assets/21433269-46d9-4c88-83d4-d742ddfa4650)
+
+![V(VDD)](https://github.com/user-attachments/assets/b7da2836-0fae-4dc4-a39c-e9d217a4253c)
+
 
 ### V1 vs. Time [0 ms - 30 ms] @ VDD = 1 V
 
-![V(V1)](https://github.com/user-attachments/assets/5d051642-18f6-4eb7-806c-316a72ab3892)
+![V(V1)](https://github.com/user-attachments/assets/aef76963-dd42-4d74-9033-5cb68b196aab)
 
 ### V2 vs. Time [0 ms - 30 ms] @ VDD = 1 V
 
-![V(V2)](https://github.com/user-attachments/assets/6d4c8da1-99b0-4a08-b073-52c487f525f5)
+![V(V2)](https://github.com/user-attachments/assets/3efd8d5a-2f68-4647-921c-6a43f6fd6898)
+
 
 ### RSTN vs. Time [0 ms - 30 ms] @ VDD = 1 V
-
-![V(RSTN)](https://github.com/user-attachments/assets/ba77da62-b9b0-4737-9a78-8a1cd30544ef)
+![V(RSTN)](https://github.com/user-attachments/assets/185f648f-a538-4fa1-add5-172f129150bf)
 
 ### I(REF) vs. Time [0 ms - 30 ms] @ VDD = 1 V
 
-![I(IREF)](https://github.com/user-attachments/assets/3ce5938e-5ee4-4aa8-93d4-dc996359924e)
+![I(IREF)](https://github.com/user-attachments/assets/c5b5e7d9-f33b-48a9-998c-61ed7acb1c22)
+
 
 ### I(NM1) vs. Time [0 ms - 30 ms] @ VDD = 1 V
 
-![I(NM1)](https://github.com/user-attachments/assets/b6c6598b-d170-45ef-9317-d849cb489e73)
+![I(NM1)](https://github.com/user-attachments/assets/6758e5d8-58f3-44da-b1d0-486b3a7338e7)
 
 ## Open Source Tools Used
 ### eSim
